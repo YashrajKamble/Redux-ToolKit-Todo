@@ -13,12 +13,12 @@ export const todoSlice = createSlice({
         id: nanoid(),
         text: action.payload.text,
       };
-      state.action.push(todo);
+      state.todos.push(todo);
     },
     removeTodo: (state, action) => {
       state.todos = state.filter((todo) => todo.id !== action.payload);
     },
-    updatesTodo: () => {},
+    // updatesTodo: () => {},
   },
 });
 
